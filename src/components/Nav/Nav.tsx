@@ -1,9 +1,13 @@
 import { Navbar, Nav, Container, Col, Button } from "react-bootstrap";
 import * as Icon from 'react-bootstrap-icons';
 import '../../pages/Home/Home.css';
+import { useNavigate } from "react-router-dom";
 
 
 export default function NavBar() {
+
+    const navigate = useNavigate();
+
     return (
         <Navbar expand="lg" className="bg-body-tertiary justify-content-between">
             <Container fluid>
@@ -16,7 +20,7 @@ export default function NavBar() {
                             <Nav.Link href="/about" className="mx-3">About</Nav.Link>
                             <Nav.Link href="/features" className="mx-3">Features</Nav.Link>
                             <Nav.Link href="/pricing" className="mx-3">Pricing</Nav.Link>
-                            <Button variant="success" type="submit" className="ml-auto mx-3 custom-button">Begin Now <Icon.ArrowRight /></Button>
+                            <Button onClick={() => { navigate("/AI") }} variant="success" type="submit" className="ml-auto mx-3 custom-button">Begin Now <Icon.ArrowRight /></Button>
                         </Nav>
                     </Navbar.Collapse>
                 </Col>
