@@ -4,9 +4,16 @@ import { Container, Row, Col, Card, Button, Image } from "react-bootstrap";
 import './Home.css';
 import SignLangaugePhoto from "../../photos/SignLanguageCartoon.jpg";
 import * as Icon from 'react-bootstrap-icons';
+import { useNavigate } from "react-router-dom";
 
 
 const Home: React.FC = () => {
+
+    const navigation = useNavigate();
+
+    const handleNavigation = (page: string) => {
+        navigation("/" + page);
+    }
 
     return (
         <Container fluid className="no-overflow">
@@ -28,7 +35,7 @@ const Home: React.FC = () => {
                                 <Card.Text>
                                     Make learning Sign Language more accessible, personalized and fun!
                                 </Card.Text>
-                                <Button variant="success" type="submit" className="ml-auto custom-button">Start Learning Now! </Button>
+                                <Button onClick={() => { handleNavigation('Ai') }} variant="success" type="submit" className="ml-auto custom-button">Start Learning Now! </Button>
                             </Card.Body>
                         </Card>
                     </Col>
@@ -39,7 +46,7 @@ const Home: React.FC = () => {
             </Container>
             <br /><br /><br /><br /><br />
             <Container fluid className="d-flex justify-content-center align-items-center bounce">
-                <Button variant="light">
+                <Button variant="light" onClick={() => { handleNavigation('placeholder') }}>
                     <Icon.ArrowDownCircle size={40} color="#28CB8B" />
                 </Button>
             </Container>

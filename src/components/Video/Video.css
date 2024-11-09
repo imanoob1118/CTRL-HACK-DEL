@@ -1,0 +1,5 @@
+.video_size {
+    width: '85%';
+    height: 'auto';
+    transform: 'scaleX(-1)';
+}
