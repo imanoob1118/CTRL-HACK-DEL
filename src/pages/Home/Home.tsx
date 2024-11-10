@@ -24,7 +24,7 @@ const Home: React.FC = () => {
                                 <br></br>
                                 <Card.Text className="display-5 mt-5 custom-font semi-bold">
                                     <span className="custom-green-txt-color no-space">
-                                        WELCOME TO AI SIGN LEARNING
+                                        WELCOME TO AI SIGN LANGUAGE LEARNING
                                     </span>
                                     <br />
                                     FOR YOUR VILLAGE

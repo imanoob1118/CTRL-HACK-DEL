@@ -28,8 +28,8 @@ const VideoPage: React.FC = () => {
             <NavBar />
 
             <Container className='align-items-center'>
-                <Card className='align-items-center no-border'>
-                    <Card.Text className='mt-5 fs-1' >
+                <Card className='align-items-center'>
+                <Card.Text className='mt-5 fs-1' style={{ border: 'none' }}>
                         Learn From Our Videos:
                     </Card.Text>
                 </Card>

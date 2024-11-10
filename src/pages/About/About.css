@@ -39,3 +39,6 @@ html, body {
     color: #000000; /* Set text color to white */
     line-height: 1.6;
 }
+.green-background{
+    background-color: green;
+}

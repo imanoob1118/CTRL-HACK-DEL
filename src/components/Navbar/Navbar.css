@@ -5,3 +5,11 @@
 .move-left {
     margin-right: 10%;
 }
+
+.navbar-custom {
+    background-color: #28a745; /* Bootstrap's green color */
+}
+.custom-navbar-rounded {
+    border-radius: 15px; /* Adjust the value to your preference */
+    border: 2px solid #ddd; /* Optional: adds a border */
+}

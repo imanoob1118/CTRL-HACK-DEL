@@ -10,7 +10,7 @@ export default function NavBar() {
 
 
     return (
-        <Navbar expand="lg" className="bg-body-tertiary justify-content-between">
+        <Navbar expand="lg" className="bg-body-tertiary justify-content-between custom-navbar-rounded">
             <Container fluid>
                 <Navbar.Brand href="/" className="mx-5 custom-green-txt-color">SignLanguageAI</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
