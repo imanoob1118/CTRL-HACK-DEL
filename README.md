@@ -71,6 +71,9 @@ AI Sign Language provides an interactive platform where users can learn American
 * It's recommended to use GIFs as they are more dynamic
 -->
 
+![Demo Photo](src/photos/image.png)
+![Demo Photo](src/photos/image2.png)
+
 
 ## Table of Contents<!-- Optional -->
 <!-- 
