@@ -13,7 +13,7 @@ const Home: React.FC = () => {
     };
 
     return (
-        <Container fluid className="no-overflow">
+        <Container fluid className="no-overflow main-background">
         <Navbar></Navbar>
             <Container fluid className="bg-body-light">
                 <Row className="no-gutters">

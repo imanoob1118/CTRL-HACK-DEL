@@ -5,6 +5,7 @@ import Home from './pages/Home/Home';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import About from './pages/About/About';
 import AI from './pages/Ai/Ai';
+import VideoPage from './pages/Videos/VideoPage';
 
 
 const App: React.FC = () => {
@@ -14,6 +15,7 @@ const App: React.FC = () => {
         <Route path="/" element={<Home />} />
         <Route path="/Ai" element={<AI />} />
         <Route path='/About' element={<About />} />
+        <Route path='/Video' element={<VideoPage />} />
 
       </Routes>
     </Router>
