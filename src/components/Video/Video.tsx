@@ -9,6 +9,8 @@ const Video = () => {
     const [isProcessing, setIsProcessing] = useState(false);
     const [cords, setCords] = useState<[number, number][] | null>(null);
     const [classification, setClassification] = useState<number | undefined>(undefined);
+    const [outputs, setOutputs] = useState<string[]>([]);
+    const [unknownCount, setUnknownCount] = useState(0);
 
     const classificationMapping: { [key: number]: string } = {
         0: 'Unknown',
@@ -69,6 +71,22 @@ const Video = () => {
                         } else {
                             setCords(null);
                         }
+                        const classificationText = classification !== undefined ? classificationMapping[classification] : "Unknown";
+                        setOutputs(prevOutputs => [...prevOutputs, classificationText]);
+
+                        if (classificationText === "Unknown") {
+                            setUnknownCount(prevCount => prevCount + 1);
+                        } else {
+                            setUnknownCount(0);
+                        }
+
+                        if (unknownCount >= 2) {
+                            setOutputs([]);
+                            setUnknownCount(0);
+                        }
+
+
+
                     } else {
                         console.log("Failed Api Request");
                     }
@@ -78,7 +96,7 @@ const Video = () => {
             }
             setIsProcessing(false);
         }
-    }, [isProcessing]);
+    }, [isProcessing, unknownCount, outputs]);
 
     const draw = useCallback(() => {
         if (canvas.current && video.current) {
@@ -142,7 +160,7 @@ const Video = () => {
                     autoPlay
                     playsInline
                     className="video-size"
-                    style={{ width: '100%', height: 'auto' }}
+                    style={{ width: '100%', height: 'auto', transform: 'scaleX(-1)' }}
                 />
                 {/* Capture Video */}
                 <canvas

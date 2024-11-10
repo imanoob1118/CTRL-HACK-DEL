@@ -5,8 +5,7 @@ import Home from './pages/Home/Home';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import About from './pages/About/About';
 import AI from './pages/Ai/Ai';
-import Features from './pages/Features/Features';
-import Pricing from './pages/Pricing/Pricing';
+
 
 const App: React.FC = () => {
   return (
@@ -15,8 +14,7 @@ const App: React.FC = () => {
         <Route path="/" element={<Home />} />
         <Route path="/Ai" element={<AI />} />
         <Route path='/About' element={<About />} />
-        <Route path='/Features' element={<Features />} />
-        <Route path='/Pricing' element={<Pricing />} />
+
       </Routes>
     </Router>
   );
