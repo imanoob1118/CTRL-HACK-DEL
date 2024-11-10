@@ -1,6 +1,5 @@
 import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
-import NavBar from '../../components/Nav/Nav';
 
 const features = [
     { title: 'Hand Gesture Recognition', description: 'Our model will be able to determine which hand gesture you are showing up and will tell you which hand sign you are doing. It uses advanced machine learning algorithms to accurately recognize and interpret various hand gestures in real-time. This feature is designed to be highly responsive and works seamlessly across different environments and lighting conditions, providing a reliable and intuitive user experience.' },
@@ -11,7 +10,6 @@ const features = [
 const Features: React.FC = () => {
     return (
         <>
-            <NavBar />
             <Container fluid className="mt-5">
                 <Row className="text-center mb-4">
                     <Col>

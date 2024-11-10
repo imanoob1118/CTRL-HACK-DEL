@@ -1,5 +1,13 @@
-.video_size {
-    width: '85%';
-    height: 'auto';
-    transform: scaleX(-1);
+.canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 90vw;
+    max-height: 90vh;
+    pointer-events: none;
+}
+
+.video {
+    max-width: 90vw;
+    max-height: 90vh;
 }

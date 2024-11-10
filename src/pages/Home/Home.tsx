@@ -1,9 +1,9 @@
 import React from "react";
-import NavBar from "../../components/Nav/Nav";
 import { Container, Row, Col, Card, Button, Image } from "react-bootstrap";
 import './Home.css';
 import SignLangaugePhoto from "../../photos/SignLanguageCartoon.jpg";
 import { useNavigate } from "react-router-dom";
+import { Banner } from "../../components/Banner/Banner";
 
 const Home: React.FC = () => {
     const navigate = useNavigate();
@@ -14,7 +14,7 @@ const Home: React.FC = () => {
 
     return (
         <Container fluid className="no-overflow">
-            <NavBar />
+        <Banner></Banner>
             <Container fluid className="bg-body-light">
                 <Row className="no-gutters">
                     <Col xs={10} md={7} lg={2}></Col>
@@ -40,7 +40,7 @@ const Home: React.FC = () => {
                         <Image src={SignLangaugePhoto} className="img-fluid" />
                     </Col>
                 </Row>
-            </Container> 
+            </Container>
             <br /><br /><br /><br /><br />
         </Container>
     );

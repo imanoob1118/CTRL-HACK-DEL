@@ -1,12 +1,10 @@
 import React from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import './Pricing.css';
-import NavBar from '../../components/Nav/Nav';
 
 const Pricing: React.FC = () => {
     return (
         <Container fluid>
-            <NavBar />
             <Row className="text-center mb-4 mt-5">
                 <Col>
                     <h1>Our Pricing Plans</h1>
