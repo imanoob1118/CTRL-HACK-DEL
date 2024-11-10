@@ -72,12 +72,6 @@
 </dev>
 
 
-<!-- - Use this html element to create a back to top button. -->
-<p align="right"><a href="#how-to-use-this-project">back to top ⬆️</a></p>
-
-
-
-
 ## About
 The idea for AI Sign Language was inspired by the need for accessible and interactive resources for people who want to learn sign language, whether for personal interest, professional development, or to communicate with loved ones who are Deaf or hard of hearing. Traditional learning resources often require in-person instruction or expensive programs, which aren’t feasible for everyone. We wanted to leverage AI and machine learning to make sign language learning more interactive, accessible, and fun for learners.
 
@@ -105,6 +99,8 @@ AI Sign Language provides an interactive platform where users can learn American
 ![Demo Photo](src/photos/image2.png)
 
 
+<!-- - Use this html element to create a back to top button. -->
+<p align="right"><a href="#how-to-use-this-project">back to top ⬆️</a></p>
 
 ## Contributors<!-- Required -->
 <!-- 
