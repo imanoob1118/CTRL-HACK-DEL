@@ -133,3 +133,16 @@ dmypy.json
 .idea/
 
 .DS_Store
+
+myenv
+
+.myenv
+myenv/
+MYENV/
+
+LICENSE
+
+
+
+README.md
+README
