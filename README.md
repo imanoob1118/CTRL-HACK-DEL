@@ -47,6 +47,36 @@
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=4000&pause=5000&background=FFFFFF00&center=true&vCenter=true&multiline=true&width=435&lines=Sign-Language-AI-Model">
 </div>
 
+## Table of Contents<!-- Optional -->
+<!-- 
+* This section is optional, yet having a contents table 
+* helps keeping your README readable and more professional.
+* 
+* If you are not familiar with HTML, no worries we all been there :D 
+* Review learning resources to create anchor links. 
+-->
+
+
+<dev align="center">
+<table align="center">
+        <tr>
+            <td><a href="#about">About</a></td>        
+            <td><a href="#how-to-use-this-project">Getting started</td>
+            <td><a href="#demo">Demo</a></td>
+        </tr>
+        <tr>
+            <td><a href="#contributors">Contributors</a></td>
+            <td><a href="#acknowledgments">Acknowledgments</a></td>
+        </tr>
+</table>
+</dev>
+
+
+<!-- - Use this html element to create a back to top button. -->
+<p align="right"><a href="#how-to-use-this-project">back to top ⬆️</a></p>
+
+
+
 
 ## About
 The idea for AI Sign Language was inspired by the need for accessible and interactive resources for people who want to learn sign language, whether for personal interest, professional development, or to communicate with loved ones who are Deaf or hard of hearing. Traditional learning resources often require in-person instruction or expensive programs, which aren’t feasible for everyone. We wanted to leverage AI and machine learning to make sign language learning more interactive, accessible, and fun for learners.
@@ -74,39 +104,6 @@ AI Sign Language provides an interactive platform where users can learn American
 ![Demo Photo](src/photos/image.png)
 ![Demo Photo](src/photos/image2.png)
 
-
-## Table of Contents<!-- Optional -->
-<!-- 
-* This section is optional, yet having a contents table 
-* helps keeping your README readable and more professional.
-* 
-* If you are not familiar with HTML, no worries we all been there :D 
-* Review learning resources to create anchor links. 
--->
-
-
-<dev align="center">
-<table align="center">
-        <tr>
-            <td><a href="#about">About</a></td>        
-            <td><a href="#how-to-use-this-project">Getting started</td>
-            <td><a href="#demo">Demo</a></td>
-            <td><a href="#project-roadmap--">Project Roadmap</a></td>
-            <td><a href="#documentation">Documentation</a></td>
-        </tr>
-        <tr>
-            <td><a href="#contributors">Contributors</a></td>
-            <td><a href="#acknowledgments">Acknowledgments</a></td>
-            <td><a href="#feedback">Feedback</a></td>
-            <td><a href="#contact">Contact</a></td>
-            <td><a href="#license">License</a></td>
-        </tr>
-</table>
-</dev>
-
-
-<!-- - Use this html element to create a back to top button. -->
-<p align="right"><a href="#how-to-use-this-project">back to top ⬆️</a></p>
 
 
 ## Contributors<!-- Required -->
