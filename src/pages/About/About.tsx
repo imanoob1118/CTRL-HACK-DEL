@@ -1,9 +1,11 @@
 import React from "react";
-import { Container, Row, Col, Card } from "react-bootstrap";
+import { Container, Row, Col, Card, Nav } from "react-bootstrap";
+import NavBar from "../../components/Nav/Nav";
 
 const About: React.FC = () => {
     return (
         <Container fluid>
+            <NavBar/>
             <Row className="justify-content-center mt-5">
                 <Col md={8}>
                     <Card>

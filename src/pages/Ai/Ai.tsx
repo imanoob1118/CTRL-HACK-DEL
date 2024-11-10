@@ -11,7 +11,7 @@ const AI: React.FC = () => {
             <Container className="mt-5">
                 <Row>
                     <Col>
-                    <Video/>
+                        <Video />
                     </Col>
                 </Row>
             </Container>

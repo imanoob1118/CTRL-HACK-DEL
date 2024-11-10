@@ -1,0 +1,21 @@
+.footer {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-section {
+    padding: 10px;
+}
+
+.footer-section.left {
+    text-align: left;
+}
+
+.footer-section.middle {
+    text-align: center;
+}
+
+.footer-section.right {
+    text-align: right;
+}

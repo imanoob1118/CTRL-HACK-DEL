@@ -3,22 +3,10 @@ import NavBar from "../../components/Nav/Nav";
 import { Container, Row, Col, Card, Button, Image } from "react-bootstrap";
 import './Home.css';
 import SignLangaugePhoto from "../../photos/SignLanguageCartoon.jpg";
-import * as Icon from 'react-bootstrap-icons';
 import { useNavigate } from "react-router-dom";
-import About from "../About/About";
-import { useRef } from "react";
-
 
 const Home: React.FC = () => {
     const navigate = useNavigate();
-
-    const aboutRef = useRef<HTMLDivElement | null>(null);
-
-    const handleScrollToAbout = () => {
-        if (aboutRef.current) {
-            aboutRef.current.scrollIntoView({ behavior: "smooth" });
-        }
-    };
 
     const handleNavigation = (path: string) => {
         navigate(`/${path}`);
@@ -52,23 +40,8 @@ const Home: React.FC = () => {
                         <Image src={SignLangaugePhoto} className="img-fluid" />
                     </Col>
                 </Row>
-            </Container>
+            </Container> 
             <br /><br /><br /><br /><br />
-            <Container fluid className="d-flex justify-content-center align-items-center bounce">
-                <Button variant="light" onClick={handleScrollToAbout}>
-                    <Icon.ArrowDownCircle size={40} color="#28CB8B" />
-                </Button>
-            </Container>
-
-            <div ref={aboutRef}>
-                <About />
-            </div>
-            {/* <div ref={featuresRef}>
-                <Features/>
-            </div>
-            <div ref={pricingRef}>
-                <Pricing/>
-            </div> */}
         </Container>
     );
 }
