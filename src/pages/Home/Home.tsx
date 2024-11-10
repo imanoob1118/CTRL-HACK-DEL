@@ -12,10 +12,6 @@ import { useRef } from "react";
 const Home: React.FC = () => {
     const navigate = useNavigate();
 
-
-
-
-
     const aboutRef = useRef<HTMLDivElement | null>(null);
 
     const handleScrollToAbout = () => {
@@ -23,8 +19,6 @@ const Home: React.FC = () => {
             aboutRef.current.scrollIntoView({ behavior: "smooth" });
         }
     };
-
-    const navigate = useNavigate();
 
     const handleNavigation = (path: string) => {
         navigate(`/${path}`);
