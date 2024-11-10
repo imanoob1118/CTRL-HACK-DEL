@@ -9,13 +9,42 @@ const Video = () => {
     const [isProcessing, setIsProcessing] = useState(false);
     const [cords, setCords] = useState<[number, number][] | null>(null);
     const [classification, setClassification] = useState<number | undefined>(undefined);
+    const [items, setItems] = useState<string[]>([]);
 
     const classificationMapping: { [key: number]: string } = {
-        0: 'Unknown',
-        1: 'Closed',
-        2: 'Point',
-        3: 'Okay'
+        0: 'One',
+        1: 'Two',
+        2: 'Three',
+        3: 'Four',
+        4: 'Five',
+        5: 'A',
+        6: 'B',
+        7: 'C',
+        8: 'D',
+        9: 'E',
+        10: 'H',
+        11: 'L',
+        12: 'O',
+        13: 'W',
+        14: 'R',
     };
+    
+    const addItem = (input: string | undefined) => {
+        const newItem = input ?? ""; // Replace undefined with an empty string
+        const updatedItems = [...items, newItem];
+    
+        // Check if there are two consecutive empty strings
+        const hasConsecutiveEmptyStrings = updatedItems.some((item, index) =>
+          item === "" && updatedItems[index - 1] === ""
+        );
+
+        if (hasConsecutiveEmptyStrings) {
+            setItems([]);
+          } else {
+            setItems(updatedItems);
+          }
+
+    }
 
     useEffect(() => {
         const startCamera = async () => {
@@ -59,6 +88,10 @@ const Video = () => {
                         const { box, cords } = response.data;
                         console.log(response.data['classification'])
                         setClassification(response.data['classification'])
+                        addItem(response.data['classification'])
+                        console.log(classification)
+                        console.log(items)
+
                         if (box) {
                             setBoundingBox(box);
                         } else {
@@ -125,7 +158,7 @@ const Video = () => {
     }, [boundingBox, cords]);
 
     useEffect(() => {
-        const interval = setInterval(processFrame, 200); // Process frame every second
+        const interval = setInterval(processFrame, 1000); // Process frame every second
         const animationFrameId = requestAnimationFrame(draw); // Start the drawing loop
         return () => {
             clearInterval(interval);
@@ -142,7 +175,7 @@ const Video = () => {
                     autoPlay
                     playsInline
                     className="video-size"
-                    style={{ width: '100%', height: 'auto' }}
+                    style={{ width: '100%', height: 'auto', transform: 'scaleX(-1)' }}
                 />
                 {/* Capture Video */}
                 <canvas
@@ -162,11 +195,16 @@ const Video = () => {
             <Container>
                 <h3>AI Response:</h3>
                 <p>{classification !== undefined ? classificationMapping[classification] : "Unknown"}</p>
-                {boundingBox && (
-                    <div>
-                        <p>Bounding Box: {JSON.stringify(boundingBox)}</p>
-                    </div>
+                {items.length > 0 ? (
+                <p>
+                    {items
+                    .map(item => classificationMapping[parseInt(item, 10)] || "")
+                    .join("")}
+                </p>
+                ) : (
+                <p>The array is empty.</p>
                 )}
+
             </Container>
         </Container>
     );
