@@ -106,17 +106,6 @@ AI Sign Language provides an interactive platform where users can learn American
 <p align="right"><a href="#how-to-use-this-project">back to top ⬆️</a></p>
 
 
-## Documentation<!-- Optional -->
-<!-- 
-* You may add any documentation or Wikis here
-* 
-* 
--->
-- https://www.youtube.com/watch?v=a99p_fAr6e4&list=PL0FM467k5KSyt5o3ro2fyQGt-6zRkHXRv
-- https://github.com/kinivi/hand-gesture-recognition-mediapipe 
-
-
-
 ## Contributors<!-- Required -->
 <!-- 
 * Without contribution we wouldn't have open source. 
