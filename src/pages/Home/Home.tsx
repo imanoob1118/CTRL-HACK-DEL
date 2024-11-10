@@ -10,6 +10,11 @@ import { useRef } from "react";
 
 
 const Home: React.FC = () => {
+    const navigate = useNavigate();
+
+
+
+
 
     const aboutRef = useRef<HTMLDivElement | null>(null);
 
