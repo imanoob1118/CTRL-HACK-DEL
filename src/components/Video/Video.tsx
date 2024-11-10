@@ -40,7 +40,6 @@ const Video = () => {
         // If canvas and video exists
         if (canvas.current && video.current) {
 
-            // Determine canvas type
             const context = canvas.current.getContext('2d');
 
             if (context) {
@@ -52,6 +51,7 @@ const Video = () => {
 
                 // Send Video Frame (image)
                 sendVideoFrame(image);
+                console.log("sent image")
 
                 // Clear screen
                 context.clearRect(0, 0, canvas.current.width, canvas.current.height);
@@ -81,7 +81,7 @@ const Video = () => {
     const sendVideoFrame = async (image: ImageData) => {
         try {
             // Send image
-            const response = await axios.post("http://10.0.2.2:5000/readImage", {
+            const response = await axios.post("http://127.0.0.1:5000/readImage", {
                 image: image
             });
 
@@ -97,7 +97,14 @@ const Video = () => {
                     setBoundingBox(null);
                 }
 
+                console.log("REQUEST SUCCESSFUL")
+
+            } else {
+                console.log("Failed Api Request");
             }
+
+
+
         } catch (error) {
             console.error("Error sending video frame to AI model", error);
         }

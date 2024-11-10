@@ -1,0 +1,41 @@
+/* About.css */
+
+/* Global styles */
+html, body {
+    background-color: #000; /* Set background color to black */
+    color: #791414; /* Set text color to white */
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* Container styles */
+.container {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #000; /* Set background color to black */
+    color: #000000; /* Set text color to white */
+}
+
+/* Card styles */
+.card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Card title styles */
+.card-title {
+    text-align: center;
+    font-size: 48px;
+    font-weight: bold;
+    color: #000000; /* Set text color to white */
+    margin-bottom: 20px;
+}
+
+/* Card text styles */
+.card-text {
+    font-size: 18px;
+    font-weight: normal;
+    color: #000000; /* Set text color to white */
+    line-height: 1.6;
+}

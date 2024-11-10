@@ -5,15 +5,25 @@ import './Home.css';
 import SignLangaugePhoto from "../../photos/SignLanguageCartoon.jpg";
 import * as Icon from 'react-bootstrap-icons';
 import { useNavigate } from "react-router-dom";
+import About from "../About/About";
+import { useRef } from "react";
 
 
 const Home: React.FC = () => {
 
-    const navigation = useNavigate();
+    const aboutRef = useRef<HTMLDivElement | null>(null);
 
-    const handleNavigation = (page: string) => {
-        navigation("/" + page);
-    }
+    const handleScrollToAbout = () => {
+        if (aboutRef.current) {
+            aboutRef.current.scrollIntoView({ behavior: "smooth" });
+        }
+    };
+
+    const navigate = useNavigate();
+
+    const handleNavigation = (path: string) => {
+        navigate(`/${path}`);
+    };
 
     return (
         <Container fluid className="no-overflow">
@@ -46,11 +56,20 @@ const Home: React.FC = () => {
             </Container>
             <br /><br /><br /><br /><br />
             <Container fluid className="d-flex justify-content-center align-items-center bounce">
-                <Button variant="light" onClick={() => { handleNavigation('placeholder') }}>
+                <Button variant="light" onClick={handleScrollToAbout}>
                     <Icon.ArrowDownCircle size={40} color="#28CB8B" />
                 </Button>
             </Container>
 
+            <div ref={aboutRef}>
+                <About />
+            </div>
+            {/* <div ref={featuresRef}>
+                <Features/>
+            </div>
+            <div ref={pricingRef}>
+                <Pricing/>
+            </div> */}
         </Container>
     );
 }
